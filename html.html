@@ -1,69 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo de Produtos</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
-  }
-  header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-  }
-  .product {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  .product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora com Som</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-  <h1>Empresa XYZ - Catálogo de Produtos</h1>
-</header>
-
-<div class="container">
-
-  <div class="product">
-    <h2>Produto 1</h2>
-    <img src="produto1.jpg" alt="Produto 1">
-    <p>Descrição do Produto 1.</p>
+  <div class="calculator">
+    <input type="text" id="screen" disabled>
+    <div class="keys">
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button class="btn" data-value="+">+</button>
+      <button class="btn" data-value="=">=</button>
+      <button class="btn" data-value="C">C</button>
+    </div>
   </div>
-
-  <div class="product">
-    <h2>Produto 2</h2>
-    <img src="produto2.jpg" alt="Produto 2">
-    <p>Descrição do Produto 2.</p>
-  </div>
-
-  <div class="product">
-    <h2>Produto 3</h2>
-    <img src="produto3.jpg" alt="Produto 3">
-    <p>Descrição do Produto 3.</p>
-  </div>
-
-</div>
-
+  <audio id="audio">
+    <source src="background-sound.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
 </body>
 </html>
